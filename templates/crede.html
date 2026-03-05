@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Credencial Empresarial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="card shadow mx-auto" style="max-width: 500px;">
+            
+            <div class="card-header bg-primary text-white">
+                <h3>Datos de Credencial Empresarial</h3>
+            </div>
+
+            <div class="card-body">
+
+                <form action="/generar" method="post" enctype="multipart/form-data">
+
+                    <div class="mb-3">
+                        <label class="form-label">Nombre Completo del Empleado</label>
+                        <input type="text" name="nombre" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Cargo o Puesto</label>
+                        <input type="text" name="puesto" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Fecha de Vigencia</label>
+                        <input type="date" name="vigen" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Número de Empleado / ID Interno</label>
+                        <input type="text" name="puesto" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Área o Departamento</label>
+                        <input type="text" name="carrera" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Fotografía Oficial</label>
+                        <input type="file" name="foto" class="form-control" accept="image/*" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Código QR Empresarial</label>
+                        <input type="file" name="qr" class="form-control" accept="image/*" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100">
+                        Generar Credencial PDF
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

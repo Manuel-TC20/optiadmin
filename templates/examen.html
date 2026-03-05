@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen Psicométrico Empresarial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .navbar-custom {
+            background-color: #1f2d3d;
+        }
+
+        .navbar-custom .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+
+        .card-custom {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .card-header-custom {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .question {
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-custom px-4">
+    <a class="navbar-brand" href="/">Sistema Empresarial</a>
+</nav>
+
+<div class="container mt-5">
+
+    <div class="card card-custom">
+        <div class="card-header card-header-custom">
+            Examen Psicométrico Empresarial
+        </div>
+
+        <div class="card-body">
+
+            <form action="/resultado" method="POST">
+
+                <div class="question">
+                    <p><strong>1. Cuando tienes mucho trabajo pendiente, ¿qué haces?</strong></p>
+                    <input type="radio" name="p1" value="3" required> Organizo prioridades y comienzo de inmediato<br>
+                    <input type="radio" name="p1" value="2"> Trabajo poco a poco sin plan claro<br>
+                    <input type="radio" name="p1" value="1"> Me estreso y lo dejo para después
+                </div>
+
+                <div class="question">
+                    <p><strong>2. Si cometes un error en el trabajo, ¿cómo reaccionas?</strong></p>
+                    <input type="radio" name="p2" value="3" required> Lo reconozco y busco solucionarlo<br>
+                    <input type="radio" name="p2" value="2"> Intento arreglarlo sin decir nada<br>
+                    <input type="radio" name="p2" value="1"> Culpo a otros
+                </div>
+
+                <div class="question">
+                    <p><strong>3. ¿Cómo trabajas en equipo?</strong></p>
+                    <input type="radio" name="p3" value="3" required> Escucho y colaboro activamente<br>
+                    <input type="radio" name="p3" value="2"> Solo participo cuando me lo piden<br>
+                    <input type="radio" name="p3" value="1"> Prefiero trabajar solo
+                </div>
+
+                <div class="question">
+                    <p><strong>4. Cuando enfrentas un problema difícil, tú:</strong></p>
+                    <input type="radio" name="p4" value="3" required> Analizo opciones antes de decidir<br>
+                    <input type="radio" name="p4" value="2"> Tomo una decisión rápida<br>
+                    <input type="radio" name="p4" value="1"> Evito el problema
+                </div>
+
+                <div class="question">
+                    <p><strong>5. Si recibes críticas constructivas:</strong></p>
+                    <input type="radio" name="p5" value="3" required> Las uso para mejorar<br>
+                    <input type="radio" name="p5" value="2"> Me incomodan pero las acepto<br>
+                    <input type="radio" name="p5" value="1"> Me molesto
+                </div>
+
+                <div class="question">
+                    <p><strong>6. ¿Cómo manejas el estrés?</strong></p>
+                    <input type="radio" name="p6" value="3" required> Mantengo la calma y busco soluciones<br>
+                    <input type="radio" name="p6" value="2"> Me afecta un poco pero sigo trabajando<br>
+                    <input type="radio" name="p6" value="1"> Me bloqueo
+                </div>
+
+                <div class="question">
+                    <p><strong>7. Cuando debes aprender algo nuevo:</strong></p>
+                    <input type="radio" name="p7" value="3" required> Investigo y practico hasta dominarlo<br>
+                    <input type="radio" name="p7" value="2"> Espero que alguien me explique<br>
+                    <input type="radio" name="p7" value="1"> Evito hacerlo
+                </div>
+
+                <div class="question">
+                    <p><strong>8. ¿Qué tan puntual eres?</strong></p>
+                    <input type="radio" name="p8" value="3" required> Siempre llego antes<br>
+                    <input type="radio" name="p8" value="2"> Llego justo a tiempo<br>
+                    <input type="radio" name="p8" value="1"> Frecuentemente llego tarde
+                </div>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <a href="/" class="btn btn-secondary">← Regresar</a>
+                    <button type="submit" class="btn btn-custom">
+                        Enviar Examen
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
